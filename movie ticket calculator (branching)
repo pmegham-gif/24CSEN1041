@@ -1,0 +1,54 @@
+def calculate_ticket_price():
+    print("--- Welcome to the Cinema Ticket Counter ---")
+    
+    # Get user input
+    try:
+        age = int(input("Please enter your age: "))
+    except ValueError:
+        print("Invalid input. Please enter a number for age.")
+        return
+
+    price = 0
+
+    # 1. THE IF-ELIF-ELSE CHAIN (Multiple Branching)
+    # This structure checks conditions from top to bottom. 
+    # Only one block will be executed.
+    
+    if age < 0:
+        print("Error: Age cannot be negative.")
+        return # Exit the function early
+        
+    elif age < 12:
+        print("Category: Child")
+        price = 5
+        
+    elif age < 18:
+        print("Category: Teenager")
+        price = 8
+        
+    else: # This executes if age is 18 or older
+        print("Category: Adult")
+        price = 12
+
+        # 2. NESTED IF STATEMENT (Branching inside a branch)
+        # This only runs if the person is an Adult (the 'else' above matched)
+        if age >= 65:
+            print("Applying Senior Citizen Discount ($2 off)...")
+            price = price - 2
+
+    # 3. SIMPLE IF STATEMENT (Single Branch)
+    # This runs independently of the age logic above
+    wants_popcorn = input("Would you like to add popcorn for $5? (yes/no): ").lower()
+    
+    if wants_popcorn == "yes":
+        price = price + 5
+        print("Popcorn added!")
+
+    # Final Output
+    print("------------------------------------------")
+    print(f"Total Ticket Price: ${price}")
+    print("------------------------------------------")
+
+# Run the program
+if __name__ == "__main__":
+    calculate_ticket_price()
