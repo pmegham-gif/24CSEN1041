@@ -52,3 +52,15 @@ def calculate_ticket_price():
 # Run the program
 if __name__ == "__main__":
     calculate_ticket_price()
+
+
+OUTPUT:
+--- Welcome to the Cinema Ticket Counter ---
+Please enter your age: 18
+18
+Category: Adult
+Would you like to add popcorn for $5? (yes/no): ------------------------------------------
+Total Ticket Price: $12
+------------------------------------------
+
+=== Code Execution Successful ===
