@@ -1,0 +1,20 @@
+a = int(input("Enter A value: "))
+b = int(input("Enter B value: "))
+
+print("Arithmetic Operators")
+print(f"{a} + {b} = {a + b}")
+print(f"{a} - {b} = {a - b}")
+print(f"{a} * {b} = {a * b}")
+print(f"{a} / {b} = {a / b:.2f}")  
+print(f"{a} % {b} = {a % b}\n")
+
+
+OUTPUT:
+Enter A value: 67
+Enter B value: 34
+Arithmetic Operators
+67 + 34 = 101
+67 - 34 = 33
+67 * 34 = 2278
+67 / 34 = 1.97
+67 % 34 = 33
