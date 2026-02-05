@@ -1,0 +1,9 @@
+found = False
+for i in range(5):
+    for j in range(5):
+        if i == 2 and j == 3:
+            print(f"Match found at ({i}, {j})! Exiting all loops.")
+            found = True
+            break  # Exits the inner loop
+    if found:
+        break      # Exits the outer loop
