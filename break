@@ -1,9 +1,22 @@
-found = False
-for i in range(5):
-    for j in range(5):
-        if i == 2 and j == 3:
-            print(f"Match found at ({i}, {j})! Exiting all loops.")
-            found = True
-            break  # Exits the inner loop
-    if found:
-        break      # Exits the outer loop
+print("--- Simple Choice Menu ---")
+
+while True:
+    user_input = input("Type 'exit' to stop the loop, or anything else to continue: ")
+
+    if user_input.lower() == "exit":
+        print("Breaking out of the loop now...")
+        break  # This stops the loop immediately
+    
+    print(f"You typed: '{user_input}'. Let's go again!\n")
+
+print("Loop finished.")
+
+
+OUTPUT:
+Type 'exit' to stop the loop, or anything else to continue: exit
+Breaking out of the loop now...
+Loop finished.
+
+=== Code Execution Successful ===
+
+
